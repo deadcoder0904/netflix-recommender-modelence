@@ -1,0 +1,11 @@
+.git
+.gitignore
+node_modules
+.modelence
+.env
+.env.*
+.modelence.env
+.modelence*.env*
+docs
+coverage
+*.log
