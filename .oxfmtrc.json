@@ -1,0 +1,8 @@
+{
+  "experimentalTailwindcss": {
+    "stylesheet": "./src/client/index.css",
+    "attributes": ["class", "className"],
+    "functions": ["clsx", "cn"],
+    "preserveWhitespace": true
+  }
+}

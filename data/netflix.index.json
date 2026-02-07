@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "model": "voyage-4-lite",
+  "inputType": "document",
+  "dimensions": 1024,
+  "count": 7789,
+  "createdAt": "2026-02-04T14:15:10.222Z",
+  "embeddingsFile": "data/netflix.embeddings.f32",
+  "normsFile": "data/netflix.norms.f32",
+  "metadataFile": "data/netflix.metadata.json"
+}

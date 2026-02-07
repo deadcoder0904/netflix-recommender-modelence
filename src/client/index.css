@@ -1,0 +1,229 @@
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+
+/* Netflix-style custom styles */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family:
+      "Netflix Sans",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      system-ui,
+      sans-serif;
+  }
+}
+
+@layer components {
+  /* Custom scrollbar for dark theme */
+  .scrollbar-netflix::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-netflix::-webkit-scrollbar-track {
+    background: #1f1f1f;
+  }
+
+  .scrollbar-netflix::-webkit-scrollbar-thumb {
+    background: #565656;
+    border-radius: 4px;
+  }
+
+  .scrollbar-netflix::-webkit-scrollbar-thumb:hover {
+    background: #808080;
+  }
+
+  /* Shimmer loading effect */
+  .shimmer {
+    background: linear-gradient(90deg, #1f1f1f 0%, #2f2f2f 50%, #1f1f1f 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  /* Focus styles for accessibility */
+  .focus-netflix:focus-visible {
+    outline: 2px solid #e50914;
+    outline-offset: 3px;
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    transition:
+      transform 300ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Button press effect */
+  .btn-press:active {
+    transform: scale(0.98);
+  }
+
+  /* Line clamp utilities */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Backdrop blur for header */
+  .header-blur {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  /* Icon button hover glow */
+  .icon-btn-glow {
+    transition: all 200ms ease;
+  }
+
+  .icon-btn-glow:hover {
+    background: rgba(229, 9, 20, 0.8);
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(229, 9, 20, 0.4);
+  }
+
+  /* Year badge glow on hover */
+  .badge-glow:hover {
+    box-shadow: 0 0 12px currentColor;
+  }
+
+  /* Dropdown custom styling */
+  .dropdown-netflix {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23B3B3B3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+  }
+
+  .dropdown-netflix option {
+    background: #2f2f2f;
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-delay-50 {
+    animation-delay: 50ms;
+  }
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animate-delay-150 {
+    animation-delay: 150ms;
+  }
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animate-delay-250 {
+    animation-delay: 250ms;
+  }
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  .clamp-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .mask-fade-right {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      #000 0%,
+      #000 calc(100% - 56px),
+      transparent 100%
+    );
+    mask-image: linear-gradient(to right, #000 0%, #000 calc(100% - 56px), transparent 100%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+
+  .scrollbar-hover {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scrollbar-gutter: stable both-edges;
+  }
+  .scrollbar-hover::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .group:hover .scrollbar-hover {
+    -ms-overflow-style: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+  }
+  .group:hover .scrollbar-hover::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  .group:hover .scrollbar-hover::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .group:hover .scrollbar-hover::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+  .group:hover .scrollbar-hover::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.28);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  *,
+  ::before,
+  ::after {
+    animation: none !important;
+  }
+}
