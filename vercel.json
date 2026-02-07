@@ -1,5 +1,11 @@
 {
   "buildCommand": "bun run build",
-  "outputDirectory": ".modelence/build",
-  "devCommand": "bun run dev"
+  "outputDirectory": ".modelence/build/client",
+  "devCommand": "bun run dev",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
