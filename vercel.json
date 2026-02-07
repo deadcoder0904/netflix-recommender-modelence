@@ -1,3 +1,5 @@
 {
-  "outputDirectory": ".modelence/build"
+  "buildCommand": "bun run build",
+  "outputDirectory": ".modelence/build",
+  "devCommand": "bun run dev"
 }
